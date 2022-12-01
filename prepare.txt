@@ -1,3 +1,5 @@
 difference between export default and export ?
 module.exports  
 stopPropagation()
+
+add favicon - sharme me
