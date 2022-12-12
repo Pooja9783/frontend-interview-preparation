@@ -1,0 +1,20 @@
+.Box{
+    width:350px;
+    height:100px;
+    border: 2px solid gray;
+    margin:auto;
+    justify-content:center;
+    text-align: center;
+}
+
+button{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100px;
+width:350px;
+font-size: 30px;
+border:none;
+background:none;
+cursor: pointer;
+}
