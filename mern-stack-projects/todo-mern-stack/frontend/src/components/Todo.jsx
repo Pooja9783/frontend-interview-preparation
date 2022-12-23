@@ -13,34 +13,39 @@ const Todo = ({ todo }) => {
   };
 
   return (
-    <li
-      className="task"
-      onClick={() => dispatch(toggleTodo(todo._id))}
-      style={{
-        textDecoration: todo.done ? "line-through" : "",
-        color: todo.done ? "red" : "white",
-      }}
-    >
-      <span style={{ display: edit ? "none" : "block" }}>{todo.data}</span>
-
+    <li className="task" onClick={() => dispatch(toggleTodo(todo._id))}>
+      <span
+        style={{
+          display: edit ? "none" : "block",
+          textDecoration: todo.done ? "line-through" : "",
+          color: todo.done ? "black" : "white",
+        }}
+      >
+        {todo.data}
+      </span>
       <form
         onSubmit={onFormSubmit}
-        style={{ display: edit ? "block" : "none" }}
+        style={{ display: edit ? "inline" : "none" }}
       >
         <input
           type="text"
-          className="edit-todo"
+          className="edit-todo-input"
           value={text}
           onChange={(e) => setText(e.target.value)}
         />
       </form>
-      <span className="icon" onClick={() => setEdit((prevState) => !prevState)}>
-        {" "}
-        Edit...
-      </span>
-      <span className="icon" onClick={() => dispatch(deleteTodo(todo._id))}>
-        Delete
-      </span>
+      <div className="span-div">
+        <span className="icon" onClick={() => dispatch(deleteTodo(todo._id))}>
+          Delete
+        </span>
+        <span
+          className="icon"
+          onClick={() => setEdit((prevState) => !prevState)}
+        >
+          {" "}
+          Edit
+        </span>
+      </div>
     </li>
   );
 };
