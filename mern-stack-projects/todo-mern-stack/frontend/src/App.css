@@ -43,7 +43,7 @@ header h1{
 
 .task span{
 background-color: #D0B8A8;
-color :#85586F;
+  color:#85586F;
 font-size:20px;
 cursor: pointer;
 
@@ -71,7 +71,7 @@ article{
   width: 100%;
   font-size : 20px;
   padding: 10px;
-  color:#D0B8A8;
+  color:#85586F;
   border:none;
  border-bottom:2px solid #85586F;
  outline: none;
