@@ -17,3 +17,6 @@ arr.filter((e, i)=>{
     console.log(i, e);
   }
 })
+
+
+//find
